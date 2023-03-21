@@ -32,6 +32,8 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.render("error");
 });
-app.listen(4200);
+app.listen(4200, () => {
+  console.log("listening on port " + 4200);
+});
 
 module.exports = app;
